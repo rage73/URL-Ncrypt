@@ -2,19 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-  <!-- Metadata -->
   <meta charset="utf-8" />
   <meta name="description" content="Password protect links using AES in the browser." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-
-  <title>Decrypt Link Lock URLs</title>
-
-  <!-- Styles -->
+  <title>URL DCrypt</title>
   <link rel="stylesheet" href="../style.css" type="text/css" />
-
-  <!-- Scripts -->
   <script type="text/javascript" src="../b64.js"></script>
   <script type="text/javascript" src="../api.js"></script>
   <script type="text/javascript" src="decrypt.js"> </script>
@@ -22,19 +15,13 @@
 
 <body onload="main()">
 
-  <!-- Display errors in a big red box -->
   <div class="error red-border" style="display: none">
     <p id="errortext">Error</p>
     <button onclick="main()">Try again</button>
     <a href="https://rage73.github.io/URL-Ncrypt"><button>Lock a link</button></a>
   </div>
 
-  <h1>Decrypt Link Lock URLs</h1>
-  <p>This application is for decrypting <a href="https://rage73.github.io/URL-Ncrypt" target="_blank">Link Lock</a> URLs without automatically redirecting. This is useful if you do not trust the source of an encrypted URL. It is also useful if the URL uses a blocked protocol like <code>javascript:</code>, for example.</p>
-
-  <p>This page is also useful if you think you have received a locked link, but it uses another domain, instead of <code>rage73.github.io</code>. This may be done as a means to <a target="_blank" href="https://rage73.github.io/URL-Ncrypt/#evading-censorship">evade censorship</a>.</p>
-
-  <hr />
+  <h1>Decrypt URLs</h1>
 
   <div class="form">
     <label for="encrypted-url">encrypted url</label>
@@ -42,21 +29,15 @@
     <label for="password">password</label>
     <input type="password" id="password" />
     <button onclick="onDecrypt()">Decrypt</button>
-    <p class="alert">INVISIBLE</p>
   </div>
-
   <hr />
-
-  <!-- Output area -->
   <div class="output">
     <label for="output">output</label>
     <input type="text" id="output" readonly/>
     <button id="copy" onclick="onCopy('output')">Copy</button>
     <a href="" id="open" target="_blank"><button>Open in New Tab</button></a>
-    <p class="alert" id="copy-alert">Copied</p>
   </div>
 
-</body>
 </body>
 
 </html>

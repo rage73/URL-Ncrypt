@@ -2,19 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-  <!-- Metadata -->
   <meta charset="utf-8" />
   <meta name="description" content="Password protect links using AES in the browser." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-  <title>Link Lock - Password-protect links</title>
-
-  <!-- Styles -->
+  <title>URL NCrypt</title>
   <link rel="stylesheet" href="style.css" type="text/css" />
-
-  <!-- Scripts -->
   <script type="text/javascript" src="b64.js"></script>
   <script type="text/javascript" src="api.js"></script>
   <script type="text/javascript" src="index.js"> </script>
@@ -22,7 +15,6 @@
 
 <body onload="main()">
 
-  <!-- Display errors in a big red box -->
   <div class="error red-border" style="display: none">
     <p id="errortext">Error</p>
     <button onclick="main()">Try again</button>
