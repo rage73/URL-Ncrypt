@@ -1,7 +1,3 @@
-/**
- * Created by Jacob Strieb
- * May 2020
- */
 
 var b64 = (function() {
 
