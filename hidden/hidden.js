@@ -1,9 +1,3 @@
-/**
- * Created by Jacob Strieb
- * December 2020
- */
-
-
 
 /*******************************************************************************
  * Helper Functions
@@ -59,20 +53,9 @@ async function onHide() {
   try {
     let _ = JSON.parse(b64.decode(hash));
   } catch {
-    error("The hidden URL appears corrupted. It must be a password-protected Link Lock URL. <a href=\"https://jstrieb.github.io/link-lock\">Click here to add a password.</a>");
+    error("The hidden URL appears corrupted. It must be a password-protected Link Lock URL. <a href=\"https://rage73.github.io/URL-Ncrypt\">Click here to add a password.</a>");
     return;
 
-    // Uncomment this to allow hiding arbitrary pages. Not secure though, so I
-    // disabled it.
-    /*
-    let hashData = {
-      unencrypted: true,
-      url: hiddenUrl.toString(),
-    };
-
-    hiddenUrl.hash = b64.encode(JSON.stringify(hashData));
-    document.querySelector("#encrypted-url").value = hiddenUrl.toString();
-    */
   }
 
   let output = document.querySelector("#output");
@@ -148,7 +131,7 @@ async function randomLink() {
 function main() {
   if (window.location.hash) {
     document.querySelector("#encrypted-url").value =
-      `https://jstrieb.github.io/link-lock/${window.location.hash}`;
+      `https://rage73.github.io/URL-Ncrypt/${window.location.hash}`;
 
     window.location.hash = "";
   }
